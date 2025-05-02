@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Project Update - Fly Pvt Ltd</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #238faa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #fff8f0; 
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #6B4226;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      background-color: #fff;
+    }
+    textarea {
+      height: 100px;
+    }
+    .submit-btn {
+      background-color: #2d91a0; 
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      font-size: 1em;
+    }
+    .submit-btn:hover {
+      background-color: #138b83; 
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #238faa;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fly Pvt Ltd</h1>
+    <p>Daily Project Update Form</p>
+  </header>
+
+  <div class="container">
+    <h2>Project Update</h2>
+<form th:action="@{/submitReport}" method="post" th:object="${projectReport}">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="employee">Employee Name</label>
+<input type="text" id="employee" name="employeeName" placeholder="Enter employee name" required>
+
+      <label for="project">Project Name</label>
+      <input type="text" id="project" name="projectName" placeholder="Enter project name" required>
+
+      <label for="status">Progress Status</label>
+      <select id="status" name="status" required>
+        <option value="">--Select Status--</option>
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="On Hold">On Hold</option>
+      </select>
+
+      <label for="description">Project Description</label>
+      <textarea id="description" name="description" placeholder="Provide a brief description of the project..." required></textarea>
+
+      <label for="challenges">Challenges Faced</label>
+      <textarea id="challenges" name="challenges" placeholder="Mention any challenges faced during the project..."></textarea>
+
+      <label for="nextSteps">Next Steps</label>
+      <textarea id="nextSteps" name="nextSteps" placeholder="Outline the next steps or plans for the project..."></textarea>
+
+      <button type="submit" class="submit-btn">Submit Report</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Fly Pvt Ltd. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

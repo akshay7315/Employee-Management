@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Confirmation</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .confirmation-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: #0d47a1;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: #333;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1565c0;
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 3000);
+    </script>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h2>Employee Deleted Successfully</h2>
+        <p>You will be redirected to the home page shortly.</p>
+        <a href="/home" class="btn">Go to Home Now</a>
+    </div>
+</body>
+</html>

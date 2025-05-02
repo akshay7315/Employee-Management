@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Employees</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #1976d2;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            margin-right: 5px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-danger {
+            background-color: #f44336;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .action-buttons {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Employees</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Designation</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="emp : ${employee}">
+                    <td th:text="${emp.id}"></td>
+                    <td th:text="${emp.name}"></td>
+                    <td th:text="${emp.city}"></td>
+                    <td th:text="${emp.designation}"></td>
+             
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

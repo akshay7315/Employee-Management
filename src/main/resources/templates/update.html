@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #0d47a1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Update Employee</h2>
+        <form th:action="@{/update1}" th:object="${employee}" method="post">
+            <label for="id">ID</label>
+            <input type="text" th:field="*{id}" />
+
+            <label for="name">Name</label>
+            <input type="text" id="name" th:field="*{name}" required />
+
+            <label for="city">City</label>
+            <input type="text" id="city" th:field="*{city}" required />
+
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" th:field="*{designation}" required />
+
+            <button type="submit" class="btn">Update</button>
+        </form>
+    </div>
+</body>
+</html>

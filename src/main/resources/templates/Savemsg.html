@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Save Success</title>
+  <style>
+   
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: 
+        linear-gradient(135deg, #1abc9c, #16a085),  
+        url('https://www.transparenttextures.com/patterns/diagonal-stripes.png');  
+      background-size: cover, 200px 200px;
+      background-position: center, top left; 
+      background-attachment: fixed, fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Success Container */
+    .success-container {
+      background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .success-container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+   
+    h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+
+    .success-message {
+      font-size: 18px;
+      color: #27ae60;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    
+    .home-btn {
+      padding: 12px 25px;
+      background-color: #3498db;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background-color: #2980b9;
+      transform: scale(1.1);
+    }
+
+  
+    @media (max-width: 480px) {
+      .success-container {
+        width: 80%;
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+
+      .success-message {
+        font-size: 16px;
+      }
+      
+      .home-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="success-container">
+    <h2>Success!</h2>
+    <div class="success-message">
+      Employee details have been successfully saved.
+    </div>
+    <a href="/home" class="home-btn">Go to Home Page</a>
+  </div>
+
+</body>
+</html>
